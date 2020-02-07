@@ -3,9 +3,10 @@ import React from 'react';
 const Recipe = () => {
     return(
         <div>
-            <h1>Recipe Component</h1>
+            <h1>Title</h1>
+            <p>Calories</p>
         </div>
     );
 }
 
-export default Recipe
+export default Recipe;
