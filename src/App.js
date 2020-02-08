@@ -30,6 +30,7 @@ const updateSearch = e => {
 const getSearch = e => {
   e.preventDefault();
   setQuery(search);
+  setSearch('');
 }
 
   return(
@@ -38,14 +39,17 @@ const getSearch = e => {
         <input className='search-bar' type='text' value={search} onChange={updateSearch}/>
         <button className='search-button' type='submit'>Search</button>
       </form>
+      <div className='recipes'>
       {recipes.map(recipe => (
         <Recipe
         key={recipe.recipe.label} 
         title={recipe.recipe.label} 
         calories={recipe.recipe.calories}
         image={recipe.recipe.image}
+        ingredients={recipe.recipe.ingredients}
         />
       ))}
+    </div>
     </div>
   );
 }
